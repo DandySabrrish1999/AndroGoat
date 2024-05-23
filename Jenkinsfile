@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                // Use Maven to build the project
-                sh 'mvn clean package'
+                // Use gradle to build the project
+                sh './gradlew clean build'
             }
         }
         stage('Archive') {
