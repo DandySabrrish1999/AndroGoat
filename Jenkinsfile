@@ -10,7 +10,8 @@ pipeline {
         stage('Build') {
             steps {
                 // Use gradle to build the project
-                sh './gradlew clean build'
+                bat 'start /B gradle clean build'
+
             }
         }
         stage('Archive') {
