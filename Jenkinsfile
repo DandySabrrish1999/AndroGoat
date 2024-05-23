@@ -13,5 +13,10 @@ pipeline {
                  bat 'echo "Build stage running..."'
             }
         }
+        stage('Archive') {
+            steps {
+                archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
+            }
+        }
     }
 }
