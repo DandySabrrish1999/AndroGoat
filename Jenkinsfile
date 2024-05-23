@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                // Build steps go here, for example:
-                 bat 'echo "Build stage running..."'
+                // Use Maven to build the project
+                sh 'mvn clean package'
             }
         }
         stage('Archive') {
