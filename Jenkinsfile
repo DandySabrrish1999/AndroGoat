@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Build steps go here, for example:
-                sh 'gradle build"'
+                 bat 'echo "Build stage running..."'
             }
         }
     }
